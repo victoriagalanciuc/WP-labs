@@ -13,8 +13,6 @@
         android:text="Done with Pride and Prejudice by Victoria Galanciuc!"
         android:layout_centerInParent="true"
 
-        android:id="@+id/textView" />
-
     <Button
         android:layout_width="350dp"
         android:layout_height="50dp"
@@ -31,6 +29,24 @@
         android:textColor="#4f277a"
         android:textSize="20dp"
         />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:text="Default text element"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="Custom text element"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="30dp"
+        android:textColor="#d3ae94"
+        android:background="#efe8e3"
+        />
+
 
 
 
