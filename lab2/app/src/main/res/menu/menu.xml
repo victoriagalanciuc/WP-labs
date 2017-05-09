@@ -4,11 +4,10 @@
     <item
         android:title="Change button color"
         android:id="@+id/changeButtonColor"
-        app:showsAsAction="always"
         />
     <item
         android:title="Add a text element"
-        android:id="@+id/AddText"
+        android:id="@+id/addText"
         />
     <item
         android:title="Close application"
