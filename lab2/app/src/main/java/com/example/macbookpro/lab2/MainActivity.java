@@ -1,23 +1,30 @@
 package com.example.macbookpro.lab2;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
+    Button openKeyboard;
     TextView text;
+    RelativeLayout background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.button);
+        openKeyboard = (Button) findViewById(R.id.openKeyboard);
         text = (TextView) findViewById(R.id.newText);
+        background = (RelativeLayout) findViewById(R.id.background);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        openKeyboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager inputMethodManager=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
+            }
+        });
+
+
     }
 
     @Override
@@ -60,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.changeButtonColor:
-                Random rnd = new Random();
-                int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                Random random = new Random();
+                int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
                 button.setBackgroundColor(color);
                 break;
 
@@ -73,6 +91,39 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
         }
+        return true;
+
+
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch(keyCode){
+            case KeyEvent.KEYCODE_V:
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(
+                        MainActivity.this);
+                builder.setMessage("You pressed V key")
+                        .setTitle("Congratulations!")
+                        .setCancelable(false)
+                        .setPositiveButton("OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+                break;
+            case KeyEvent.KEYCODE_G:
+                Random random = new Random();
+                int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
+                background.setBackgroundColor(color);
+                break;
+        }
+
         return true;
     }
 
