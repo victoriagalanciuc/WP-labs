@@ -28,21 +28,39 @@
         android:background="#27125b"
         android:id="@+id/showKeyboard"
          />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="50dp"
+        android:text="Brush"
+        android:textColor="#FFFFFF"
+        android:background="#27125b"
+        android:id="@+id/brush"
+         />
 
     <com.example.macbookpro.lab3.CircleDrawViewGradient
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/circle"
         />
     <com.example.macbookpro.lab3.RectangleDrawViewGradient
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="150dp"
         android:id="@+id/rectangle"
         />
+
+    <com.example.macbookpro.lab3.DrawingSpace
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/drawingSpace"
+        />
+
 
 
 

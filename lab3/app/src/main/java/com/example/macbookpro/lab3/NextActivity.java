@@ -16,11 +16,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+
 public class NextActivity extends AppCompatActivity {
     Button drawBitmap;
     Button showKeyboard;
+    Button brush;
     public static RadialGradient gradient;
     public static RadialGradient gradient2;
+    DrawingSpace drawingSpace;
     CircleDrawViewGradient circle;
     RectangleDrawViewGradient rectangle;
 
@@ -29,9 +32,10 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
-
+        drawingSpace = (DrawingSpace) findViewById(R.id.drawingSpace);
         drawBitmap = (Button) findViewById(R.id.drawBitmap);
         showKeyboard = (Button) findViewById(R.id.showKeyboard);
+        brush = (Button) findViewById(R.id.brush);
         circle = (CircleDrawViewGradient) findViewById(R.id.circle);
         rectangle = (RectangleDrawViewGradient) findViewById(R.id.rectangle);
 
@@ -61,6 +65,13 @@ public class NextActivity extends AppCompatActivity {
             public void onClick(View view) {
                 InputMethodManager inputMethodManager=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
+            }
+        });
+
+        brush.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawingSpace.getPaint().setColor(0xffb303f9);
             }
         });
 

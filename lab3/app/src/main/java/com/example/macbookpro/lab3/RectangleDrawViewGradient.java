@@ -33,6 +33,6 @@ public class RectangleDrawViewGradient extends View {
         RadialGradient gradient = NextActivity.gradient2;
         if(gradient != null)
             paint.setShader(gradient);
-        canvas.drawRect(0, 0, 300, 300, paint);
+        canvas.drawRect(0, 0, 200, 200, paint);
     }
 }
