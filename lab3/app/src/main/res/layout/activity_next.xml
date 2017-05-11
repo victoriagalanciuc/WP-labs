@@ -32,12 +32,22 @@
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginLeft="290dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="Brush"
         android:textColor="#FFFFFF"
         android:background="#27125b"
         android:id="@+id/brush"
          />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="60dp"
+        android:text="Eraser"
+        android:textColor="#FFFFFF"
+        android:background="#27125b"
+        android:id="@+id/eraser"
+        />
 
     <com.example.macbookpro.lab3.CircleDrawViewGradient
         android:layout_width="150dp"
@@ -58,6 +68,7 @@
         android:layout_width="400dp"
         android:layout_height="150dp"
         android:layout_marginTop="150dp"
+        android:background="#ffffff"
         android:id="@+id/drawingSpace"
         />
 

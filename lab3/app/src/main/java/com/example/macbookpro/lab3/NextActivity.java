@@ -21,6 +21,7 @@ public class NextActivity extends AppCompatActivity {
     Button drawBitmap;
     Button showKeyboard;
     Button brush;
+    Button eraser;
     public static RadialGradient gradient;
     public static RadialGradient gradient2;
     DrawingSpace drawingSpace;
@@ -36,6 +37,7 @@ public class NextActivity extends AppCompatActivity {
         drawBitmap = (Button) findViewById(R.id.drawBitmap);
         showKeyboard = (Button) findViewById(R.id.showKeyboard);
         brush = (Button) findViewById(R.id.brush);
+        eraser = (Button) findViewById(R.id.eraser);
         circle = (CircleDrawViewGradient) findViewById(R.id.circle);
         rectangle = (RectangleDrawViewGradient) findViewById(R.id.rectangle);
 
@@ -72,6 +74,14 @@ public class NextActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 drawingSpace.getPaint().setColor(0xffb303f9);
+            }
+        });
+
+        eraser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawingSpace.getPaint().setColor(Color.WHITE);
+                drawingSpace.setBrushSize(20);
             }
         });
 
