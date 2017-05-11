@@ -36,6 +36,13 @@
         android:layout_marginLeft="20dp"
         android:id="@+id/circle"
         />
+    <com.example.macbookpro.lab3.RectangleDrawViewGradient
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/rectangle"
+        />
 
 
 

@@ -8,38 +8,31 @@ import android.graphics.RadialGradient;
 import android.util.AttributeSet;
 import android.view.View;
 
-
 import com.example.macbookpro.lab3.NextActivity;
 
-public class CircleDrawViewGradient extends View {
+public class RectangleDrawViewGradient extends View {
     Paint paint = new Paint();
-    public RadialGradient gradient = NextActivity.gradient;
 
-    public CircleDrawViewGradient(Context context) {
+    public RectangleDrawViewGradient(Context context) {
         super(context);
-        paint.setColor(0xfff94065);
-
+        paint.setColor(0xffffeace);
     }
 
-    public CircleDrawViewGradient(Context context, AttributeSet attrs) {
+    public RectangleDrawViewGradient(Context context, AttributeSet attrs) {
         super(context, attrs);
-        paint.setColor(0xfff94065);
-
+        paint.setColor(0xffffeace);
     }
 
-    public CircleDrawViewGradient(Context context, AttributeSet attrs, int defStyle) {
+    public RectangleDrawViewGradient(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        paint.setColor(0xfff94065);
-
+        paint.setColor(0xffffeace);
     }
 
     @Override
     public void onDraw(Canvas canvas) {
-
-        RadialGradient gradient = NextActivity.gradient;
+        RadialGradient gradient = NextActivity.gradient2;
         if(gradient != null)
             paint.setShader(gradient);
-        canvas.drawCircle(100, 100, 100, paint);
+        canvas.drawRect(0, 0, 300, 300, paint);
     }
-
 }

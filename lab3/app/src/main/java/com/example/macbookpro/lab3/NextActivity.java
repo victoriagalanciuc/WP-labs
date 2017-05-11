@@ -20,7 +20,9 @@ public class NextActivity extends AppCompatActivity {
     Button drawBitmap;
     Button showKeyboard;
     public static RadialGradient gradient;
+    public static RadialGradient gradient2;
     CircleDrawViewGradient circle;
+    RectangleDrawViewGradient rectangle;
 
 
     @Override
@@ -31,6 +33,7 @@ public class NextActivity extends AppCompatActivity {
         drawBitmap = (Button) findViewById(R.id.drawBitmap);
         showKeyboard = (Button) findViewById(R.id.showKeyboard);
         circle = (CircleDrawViewGradient) findViewById(R.id.circle);
+        rectangle = (RectangleDrawViewGradient) findViewById(R.id.rectangle);
 
         drawBitmap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +82,9 @@ public class NextActivity extends AppCompatActivity {
                 gradient = new RadialGradient(0, 0, 50, 0xffffccf3, 0xfff94065, Shader.TileMode.MIRROR);
                 circle.invalidate();
                 break;
+            case KeyEvent.KEYCODE_R:
+                gradient2 = new RadialGradient(0, 0, 100, 0xffeace, 0xfff99004, Shader.TileMode.MIRROR);
+                rectangle.invalidate();
         }
         return true;
     }
