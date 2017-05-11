@@ -38,14 +38,14 @@
         android:layout_width="200dp"
         android:layout_height="20dp"
         android:text="Default text element"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="390dp"
         android:layout_marginLeft="20dp"
         />
     <TextView
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:text="Custom text element"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="420dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
         android:textColor="#d3ae94"
