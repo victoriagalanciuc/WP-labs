@@ -48,5 +48,31 @@
         android:layout_height="100dp"
         android:layout_centerVertical="true"
         />
+    <com.example.macbookpro.lab3.CircleDrawView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="200dp"
+        />
+    <com.example.macbookpro.lab3.SquareDrawView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="20dp"
+        />
+<com.example.macbookpro.lab3.RectangleDrawView
+    android:layout_width="130dp"
+    android:layout_height="75dp"
+    android:layout_marginLeft="200dp"
+    android:layout_marginTop="100dp"
+    />
+    <com.example.macbookpro.lab3.OvalDrawView
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="160dp"
+        />
+
+
 
 </RelativeLayout>
