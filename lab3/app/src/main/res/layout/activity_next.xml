@@ -11,11 +11,35 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="335dp"
         android:text="Draw bitmap"
         android:textColor="#FFFFFF"
         android:background="#27125b"
-        android:id="@+id/drawBitmap"/>
+        android:id="@+id/drawBitmap"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="400dp"
+        android:text="Show keyboard"
+        android:textColor="#FFFFFF"
+        android:background="#27125b"
+        android:id="@+id/showKeyboard"
+         />
+
+    <com.example.macbookpro.lab3.CircleDrawViewGradient
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/circle"
+        />
+
+
+
+
 
 
 
