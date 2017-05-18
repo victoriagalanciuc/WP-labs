@@ -100,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode){
             case KeyEvent.KEYCODE_VOLUME_UP:
-
-                speedOfAnimation += 100;
+                if (speedOfAnimation - 100 > 0 )
+                speedOfAnimation -= 100;
 
                 t.cancel();
                 t = new java.util.Timer();
@@ -151,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
 
-                speedOfAnimation -= 100;
+                speedOfAnimation += 100;
+
                 t.cancel();
 
                 t = new java.util.Timer();
