@@ -12,23 +12,17 @@ public class RectangleDrawView extends View {
     public RectangleDrawView(Context context) {
         super(context);
         paint.setColor(0xffcb07f2);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(15);
 
     }
 
     public RectangleDrawView(Context context, AttributeSet attrs) {
         super(context, attrs);
         paint.setColor(0xffcb07f2);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(15);
     }
 
     public RectangleDrawView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         paint.setColor(0xffcb07f2);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(15);
     }
 
     @Override
